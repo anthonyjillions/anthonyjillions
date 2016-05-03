@@ -1,0 +1,38 @@
+.contactForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+.contactForm input,
+textarea {
+  width: 95vw;
+  outline: 0;
+  background: #FFF;
+  margin-bottom: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 2px;
+  padding: 10px 0px;
+  color: rgb(100, 100, 100);
+}
+
+.contactForm textarea {
+  height: 150px;
+}
+
+.Submit  {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Submit button {
+  cursor: pointer;
+  outline: 0;
+  font-size: 2em;
+  text-align: center;
+  padding: 10px;
+}

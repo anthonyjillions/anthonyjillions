@@ -41,10 +41,42 @@ const history = syncHistoryWithStore(browserHistory, store, {
 
 // Set up the router, wrapping all Routes in the App component
 import App from 'containers/App';
-import createRoutes from './routes';
+function errorLoading(err) {
+  console.error('Dynamic page loading failed', err);
+}
+
+function loadRoute(cb) {
+  return (module) => cb(null, module.default);
+}
+
 const rootRoute = {
   component: App,
-  childRoutes: createRoutes(store),
+  childRoutes: [
+    {
+      path: '/message',
+      getComponent(location, cb) {
+        System.import('components/Contact').then(loadRoute(cb)).catch(errorLoading);
+      },
+    },
+    {
+      path: '/info',
+      getComponent(location, cb) {
+        System.import('components/Info').then(loadRoute(cb)).catch(errorLoading);
+      },
+    },
+    {
+      path: '/',
+      getComponent(location, cb) {
+        System.import('components/Landing').then(loadRoute(cb)).catch(errorLoading);
+      },
+    },
+    {
+      path: '*',
+      getComponent(location, cb) {
+        System.import('components/NotFoundPage').then(loadRoute(cb)).catch(errorLoading);
+      },
+    },
+  ],
 };
 
 ReactDOM.render(

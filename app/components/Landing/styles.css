@@ -1,0 +1,16 @@
+.Landing {
+  height: calc(100% - 74px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.Logo {
+  font-size: 6em;
+  text-align: center;
+  flex-flow: column-reverse;
+  display: flex;
+  flex-flow: row;
+}
