@@ -12,19 +12,19 @@ export function Landing() {
         {[
           {
             letter: 'a',
-            animation: { rotateY: ['180deg', [accel, spring]] },
+            animation: { scale: ['1.3', [accel, spring]] },
           },
           {
             letter: 'j',
-            animation: { rotateX: ['180deg', [accel, spring]] },
+            animation: { scale: ['1.5', [accel, spring]] },
           },
           {
             letter: 'p',
-            animation: { rotateY: ['180deg', [accel, spring]] },
+            animation: { scale: ['1.1', [accel, spring]] },
           },
         ].map((val, i) => {
           const rend = (
-            <VelocityComponent key={i} runOnMount animation={val.animation} delay={1000} loop={1} duration={1500} >
+            <VelocityComponent key={i} runOnMount animation={val.animation} delay={1000} loop duration={1000} >
               <div style={{ padding: '0 20px', transformOrigin: '0 5' }}>
                 {val.letter}
               </div>

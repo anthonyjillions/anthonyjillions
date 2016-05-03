@@ -1,10 +1,3 @@
-/**
- *
- * App.react.js
- *
- * This component is the skeleton around the actual pages, and should only
- * contain code that should be seen on all pages. (e.g. navigation bar)
- */
 
 import React, { Component } from 'react';
 import Icon from 'components/Icon';
@@ -28,10 +21,10 @@ class App extends Component {
   closeSidebar() {
     this.setState({ showSideBar: false });
   }
+
   openSideBar() {
     this.setState({ showSideBar: true });
   }
-
 
   render() {
     const icon = {
@@ -53,7 +46,6 @@ class App extends Component {
         <div className={styles.Content}>
           {this.props.children}
         </div>
-
       </div>
     );
   }

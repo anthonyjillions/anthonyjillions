@@ -27,8 +27,9 @@ exports.postContact = (req, res) => {
         message: 'Uh oh. Something went wrong please try again',
       });
     }
+
     res.send({
-      message: 'Hey, thanks for sending an email. I\'ll get back to you asap.',
+      message: 'Hey, thanks for sending a message. I\'ll get back to you as soon as possible.',
     });
   });
 };

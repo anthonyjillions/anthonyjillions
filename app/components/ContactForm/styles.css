@@ -3,20 +3,17 @@
   justify-content: center;
   align-items: center;
   flex-flow: column;
-
-
 }
 
 .contactForm input,
 textarea {
-
   outline: 0;
   width: 300px;
   background: #FFF;
   margin-bottom: 10px;
   border-style: solid;
   border-width: 1px;
-  border-radius: 2px;
+  border-radius: 4px;
   padding: 10px 5px;
   color: rgb(100, 100, 100);
 }
@@ -25,7 +22,7 @@ textarea {
   height: 150px;
 }
 
-.Submit  {
+.Submit {
   display: flex;
   flex-flow: row;
   justify-content: space-around;

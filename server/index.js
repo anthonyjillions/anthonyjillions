@@ -18,6 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // If you need a backend, e.g. an API, add your custom backend-specific middleware here
 // app.use('/api', myApi);
 app.post('/api/contact', contactController.postContact);
+
 // Initialize frontend middleware that will serve app
 const webpackConfig = isDev
   ? require('../internals/webpack/webpack.dev.babel')

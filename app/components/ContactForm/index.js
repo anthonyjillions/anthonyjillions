@@ -8,6 +8,7 @@ export class ContactForm extends Component {
     super(props);
     this.state = {};
   }
+
   render() {
     const {
       fields: { name, email, message },

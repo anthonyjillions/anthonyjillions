@@ -2,5 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
 
+.emailAlert {
+  font-size: 2.5em;
 }
