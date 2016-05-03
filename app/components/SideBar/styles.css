@@ -30,4 +30,5 @@
   cursor: pointer;
   padding: 10px;
   align-self: flex-start;
+  font-weight: 100;
 }

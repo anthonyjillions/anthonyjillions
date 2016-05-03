@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react';
 import { reduxForm } from 'redux-form';
-import Icon from 'components/Icon';
 import styles from './styles.css';
 export const fields = ['name', 'email', 'message'];
 
@@ -13,18 +12,17 @@ export class ContactForm extends Component {
     const {
       fields: { name, email, message },
       handleSubmit,
-      resetForm,
       submitting,
     } = this.props;
     return (<form onSubmit={handleSubmit} className={styles.contactForm}>
       <div>
-        <input type="text" placeholder="name" {...name} autoComplete="off"/>
+        <input type="text" placeholder="name" {...name} autoComplete="off" />
       </div>
       <div>
-        <input type="email" placeholder="email" {...email} autoComplete="off"/>
+        <input type="email" placeholder="email" {...email} autoComplete="off" />
       </div>
       <div>
-        <textarea type="text" placeholder="message" {...message} spellCheck="off"/>
+        <textarea type="text" placeholder="message" {...message} spellCheck="off" />
       </div>
 
 

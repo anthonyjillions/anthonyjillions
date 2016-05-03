@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import styles from './styles.css';
 import ContactForm from 'components/ContactForm';
 
-
-
 export default class Contact extends Component {
   constructor(props) {
     super(props);
@@ -33,12 +31,12 @@ export default class Contact extends Component {
   render() {
     return (
       <div className={styles.Contact}>
-        {this.state.mail ?
+        {this.state.showForm ?
           <ContactForm
-            onSubmit={(fields) => postMessage(fields)}
+            onSubmit={(fields) => this.postMessage(fields)}
           />
         :
-          <div>
+          <div className={styles.emailAlert}>
             {this.state.message}
           </div>
         }

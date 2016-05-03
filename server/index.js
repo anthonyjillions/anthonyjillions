@@ -7,7 +7,6 @@ const logger = require('./logger');
 const ngrok = require('ngrok');
 const frontend = require('./middlewares/frontendMiddleware');
 
-
 const contactController = require('./controllers/contact');
 
 const isDev = process.env.NODE_ENV !== 'production';

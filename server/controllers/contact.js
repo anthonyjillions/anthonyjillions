@@ -8,7 +8,6 @@ const transporter = nodemailer.createTransport({
 });
 
 exports.postContact = (req, res) => {
-  console.log(req.body);
   const from = req.body.email;
   const name = req.body.name;
   const body = req.body.message;
@@ -25,11 +24,11 @@ exports.postContact = (req, res) => {
   transporter.sendMail(mailOptions, (err) => {
     if (err) {
       res.send({
-        message: 'uh oh. something went wrong please try again.',
+        message: 'Uh oh. Something went wrong please try again',
       });
     }
     res.send({
-      message: 'Hey, thanks for getting sending an email. I&#39;ll get back to you asap.',
+      message: 'Hey, thanks for sending an email. I\'ll get back to you asap.',
     });
   });
 };
