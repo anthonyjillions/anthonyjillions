@@ -1,7 +1,7 @@
 .contactForm {
+  height: inherit;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   flex-flow: column;
 }
 
@@ -20,19 +20,18 @@ textarea {
 
 .contactForm textarea {
   height: 150px;
+  max-height: 150px;
 }
 
 .Submit {
-  display: flex;
-  flex-flow: row;
-  justify-content: space-around;
-  align-items: center;
+  width: 100%;
 }
 
 .Submit button {
+  width: 100%;
   cursor: pointer;
   outline: 0;
-  font-size: 2em;
+  font-size: 3em;
   text-align: center;
   padding: 10px;
 }

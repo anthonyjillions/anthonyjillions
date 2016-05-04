@@ -1,23 +1,17 @@
 /* eslint consistent-return:0 */
 
 const express = require('express');
-require('dotenv').config();
-const bodyParser = require('body-parser');
+
 const logger = require('./logger');
 const ngrok = require('ngrok');
 const frontend = require('./middlewares/frontendMiddleware');
 
-const contactController = require('./controllers/contact');
-
 const isDev = process.env.NODE_ENV !== 'production';
 
 const app = express();
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
 
 // If you need a backend, e.g. an API, add your custom backend-specific middleware here
 // app.use('/api', myApi);
-app.post('/api/contact', contactController.postContact);
 
 // Initialize frontend middleware that will serve app
 const webpackConfig = isDev
