@@ -34,7 +34,6 @@ export class ContactForm extends Component {
     const {
       fields: { name, email, message },
       handleSubmit,
-      submitting,
     } = this.props;
     return (<form onSubmit={handleSubmit} className={styles.contactForm}>
       <div>
@@ -74,8 +73,8 @@ export class ContactForm extends Component {
 
 
       <div className={styles.Submit}>
-        <button type="submit" disabled={submitting}>
-            {submitting ? <i /> : <i />} <Icon name="arrow-right" />
+        <button type="submit" disabled={this.props.submitted}>
+            {this.props.submitted ? <Icon name="send" /> : <Icon name="arrow-right" />}
         </button>
       </div>
     </form>
@@ -87,7 +86,7 @@ ContactForm.propTypes = {
   fields: PropTypes.object.isRequired,
   handleSubmit: PropTypes.func.isRequired,
   resetForm: PropTypes.func.isRequired,
-  submitting: PropTypes.bool.isRequired,
+  submitted: PropTypes.bool.isRequired,
 };
 
 export default reduxForm({

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Icon from '../Icon';
 import styles from './styles.css';
 import ContactForm from 'components/ContactForm';
 
@@ -7,11 +8,12 @@ export default class Contact extends Component {
     super(props);
     this.state = {};
     this.state.showForm = true;
+    this.state.submitted = false;
     this.state.message = null;
   }
 
   postMessage(fields) {
-    this.setState({ showForm: false });
+    this.setState({ submitted: true });
     fetch('https://fathomless-dusk-45210.herokuapp.com/contact', {
       method: 'post',
       headers: new Headers({
@@ -24,7 +26,7 @@ export default class Contact extends Component {
       }),
     }).then((res) => res.json())
     .then((j) => {
-      this.setState({ message: j.message });
+      this.setState({ message: j.message, showForm: false });
     });
   }
 
@@ -34,12 +36,17 @@ export default class Contact extends Component {
         {this.state.showForm ?
           <ContactForm
             onSubmit={(fields) => this.postMessage(fields)}
+            submitted={this.state.submitted}
           />
         :
-          <div className={styles.emailAlert} onTouchStart={() => this.setState({ showForm: true })}>
-            {this.state.message ? this.state.message : 'loading'}
+          <div className={styles.emailAlert}>
+            {this.state.message}
+            <div onClick={() => this.setState({ showForm: true, submitted: false })}>
+              <Icon name="circle" size="2x" />
+            </div>
           </div>
         }
+
       </div>
     );
   }

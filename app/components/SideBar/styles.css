@@ -1,16 +1,18 @@
 .sideBar {
   background: rgb(0, 255, 240);
-  position: absolute;
+  position: fixed;
   z-index: 9999;
   top: 0;
   left: -100%;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
 .Menu {
-
   width: 100%;
+  height: calc(100% - 74px);
+  overflow: scroll;
+  background: inherit;
   text-align: center;
 }
 
