@@ -1,9 +1,3 @@
-.contactForm {
-  height: inherit;
-  display: flex;
-  align-items: flex-end;
-  flex-flow: column;
-}
 
 .contactForm input,
 textarea {

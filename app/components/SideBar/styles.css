@@ -3,14 +3,27 @@
   position: fixed;
   z-index: 9999;
   top: 0;
-  left: -100%;
-  width: 100%;
+  left: -320px;
+  width: 320px;
   height: 100%;
+}
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 667px)
+  and (max-width: 667px) {
+  .sideBar {
+    left: -100%;
+    width: 100%;
+  }
 }
 
 .Menu {
   width: 100%;
-  height: calc(100% - 74px);
+  height: 75%;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column;
   overflow: scroll;
   background: inherit;
   text-align: center;

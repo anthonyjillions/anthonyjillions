@@ -8,7 +8,6 @@
 .Logo {
   font-size: 6em;
   text-align: center;
-  flex-flow: column-reverse;
   display: flex;
   flex-flow: row;
 }
