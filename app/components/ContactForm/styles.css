@@ -12,6 +12,13 @@ textarea {
   color: rgb(100, 100, 100);
 }
 
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .contactForm input,
+  textarea {
+    width: 100%;
+  }
+}
+
 .contactForm textarea {
   height: 150px;
   max-height: 150px;
@@ -28,4 +35,5 @@ textarea {
   font-size: 3em;
   text-align: center;
   padding: 10px;
+  color: #FFF;
 }

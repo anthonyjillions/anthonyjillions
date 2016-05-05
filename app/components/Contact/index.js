@@ -40,7 +40,9 @@ export default class Contact extends Component {
           />
         :
           <div className={styles.emailAlert}>
-            {this.state.message}
+            <div>
+              {this.state.message}
+            </div>
             <div onClick={() => this.setState({ showForm: true, submitted: false })}>
               <Icon name="circle" size="2x" />
             </div>

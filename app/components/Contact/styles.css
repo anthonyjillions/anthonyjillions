@@ -19,3 +19,7 @@
   flex-flow: column;
   font-size: 1.5em;
 }
+
+.emailAlert div {
+  margin-bottom: 20px;
+}
