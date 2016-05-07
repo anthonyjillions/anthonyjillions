@@ -20,8 +20,6 @@ export default function Info() {
           const render = (
             <div key={i} className={styles.listItem}>
               {value}
-              <hr>
-              </hr>
             </div>
           );
           return render;
@@ -35,8 +33,6 @@ export default function Info() {
           const render = (
             <div key={i} className={styles.listItem}>
               {value}
-              <hr>
-              </hr>
             </div>
           );
           return render;
